@@ -1,0 +1,193 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Contenu de Bayân Enfants</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Scheherazade+New:wght@400;700&display=swap">
+<style>
+/* Mise en page : fiche de relecture, une colonne de lecture, cartes uniquement pour les invocations */
+:root {
+  --bg: #F8F5EE; --surface: #FFFFFF; --line: #E6DFCF; --ink: #17201C; --muted: #5E6863;
+  --accent: #12664B; --accent-soft: #E3F0EA; --gold: #8A6A2B; --gold-soft: #F4EAD3; --warn: #8A4B0B; --warn-soft: #FBE7CF;
+  --sans: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --arabic: "Scheherazade New", "Amiri", "Noto Naskh Arabic", serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0B1311; --surface: #121C19; --line: #24342D; --ink: #EBEFEA; --muted: #A3ADA7;
+  --accent: #48B98F; --accent-soft: #16302A; --gold: #D8B766; --gold-soft: #2B2617; --warn: #F0B77A; --warn-soft: #33230F; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0B1311; --surface: #121C19; --line: #24342D; --ink: #EBEFEA; --muted: #A3ADA7;
+  --accent: #48B98F; --accent-soft: #16302A; --gold: #D8B766; --gold-soft: #2B2617; --warn: #F0B77A; --warn-soft: #33230F; color-scheme: dark }
+
+body { background: var(--bg); color: var(--ink); font-family: var(--sans); font-size: 16px; line-height: 1.6; }
+.wrap { max-width: 860px; margin: 0 auto; padding-block: 40px 72px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: flex; flex-direction: column; gap: 48px; }
+h1, h2, h3 { text-wrap: balance; margin: 0; line-height: 1.2; }
+h1 { font-size: clamp(28px, 5vw, 38px); letter-spacing: -0.02em; }
+h2 { font-size: 24px; letter-spacing: -0.01em; }
+h3 { font-size: 18px; }
+p { margin: 0; max-width: 68ch; }
+.eyebrow { font-size: 12px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); }
+.lead { font-size: 18px; color: var(--muted); }
+section { display: flex; flex-direction: column; gap: 16px; }
+.ar { font-family: var(--arabic); direction: rtl; }
+.steps { margin: 0; padding-left: 22px; display: flex; flex-direction: column; gap: 6px; max-width: 68ch; }
+.note { background: var(--warn-soft); color: var(--warn); border-radius: 12px; padding: 12px 16px; font-size: 14px; }
+
+.check { display: inline-flex; gap: 14px; font-size: 13px; color: var(--muted); white-space: nowrap; }
+.check span::before { content: ""; display: inline-block; width: 13px; height: 13px; border: 1.5px solid var(--muted); border-radius: 3px; margin-right: 6px; vertical-align: -2px; }
+
+.table-box { overflow-x: auto; background: var(--surface); border: 1px solid var(--line); border-radius: 16px; }
+table { border-collapse: collapse; width: 100%; min-width: 720px; font-size: 14px; }
+th, td { text-align: left; padding: 10px 14px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+th { font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); background: var(--bg); }
+tr:last-child td { border-bottom: 0; }
+td.num { font-variant-numeric: tabular-nums; color: var(--muted); width: 32px; }
+td .letter { font-family: var(--arabic); font-size: 34px; line-height: 1.3; }
+td .word { font-family: var(--arabic); font-size: 22px; }
+
+.duas { display: grid; gap: 14px; }
+.dua { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.dua header { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 8px; }
+.dua .ar { font-size: 28px; line-height: 1.8; text-align: right; }
+.dua .tr { font-style: italic; color: var(--accent); }
+.dua .src { font-size: 13px; color: var(--gold); font-weight: 600; }
+.dua .alt { border-top: 1px dashed var(--line); padding-top: 8px; display: flex; flex-direction: column; gap: 4px; }
+.dua .alt .ar { font-size: 24px; }
+.pill { font-size: 12px; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 999px; padding: 2px 10px; }
+
+.files { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 14px; }
+.file { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px 18px; display: flex; flex-direction: column; gap: 6px; min-width: 0; }
+.file code { font-size: 13px; background: var(--gold-soft); color: var(--ink); padding: 2px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+.big { font-size: 30px; font-weight: 700; font-variant-numeric: tabular-nums; color: var(--accent); line-height: 1; }
+footer { color: var(--muted); font-size: 14px; border-top: 1px solid var(--line); padding-top: 20px; }
+</style>
+
+<div class="wrap">
+  <header style="display: flex; flex-direction: column; gap: 12px">
+    <span class="eyebrow">Bayân · espace enfants · phase 2</span>
+    <h1>Contenu à valider : l’alphabet et les invocations du quotidien</h1>
+    <p class="lead">Cette fiche réunit tout ce que l’application fera entendre aux enfants de 4 ans et plus. Avant toute publication, chaque texte doit être relu par un enseignant du Coran, puis enregistré.</p>
+  </header>
+
+  <section>
+    <h2>Comment relire</h2>
+    <ol class="steps">
+      <li>Vérifiez l’arabe, la translittération et le sens en français de chaque élément.</li>
+      <li>Cochez <strong>Validé</strong> ou <strong>À corriger</strong>, et notez la correction à côté.</li>
+      <li>Pour les invocations, confirmez la référence et dites si la forme courte suffit pour un enfant de 4 ans.</li>
+      <li>Rédigez une explication courte en wolof pour chaque invocation : elle sera enregistrée avec la vôtre.</li>
+    </ol>
+    <p class="note">Les illustrations de l’application ne montrent jamais de personnes ni de visages : seulement des objets, des fruits, des animaux et des formes. Les mots exemples ci-dessous ont été choisis pour cela.</p>
+  </section>
+
+  <section>
+    <span class="eyebrow">Partie 1 · 28 lettres</span>
+    <h2>L’alphabet arabe</h2>
+    <p>Pour chaque lettre, l’enfant entend son nom, puis le son avec les trois voyelles courtes (fatḥa, kasra, ḍamma), puis un mot qui commence par cette lettre. Le repère sonore aide les parents francophones.</p>
+    <div class="table-box">
+      <table>
+        <thead><tr><th>#</th><th>Lettre</th><th>Nom</th><th>Repère sonore</th><th>Mot exemple</th><th>Relecture</th></tr></thead>
+        <tbody id="letters"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Partie 2 · 12 moments de la journée</span>
+    <h2>Les invocations du quotidien</h2>
+    <p>Textes tirés de la Sunna (recueil Ḥiṣn al-Muslim). Quand une forme longue existe, la forme courte est proposée en premier pour les plus petits.</p>
+    <div class="duas" id="duas"></div>
+  </section>
+
+  <section>
+    <span class="eyebrow">Partie 3 · enregistrements</span>
+    <h2>Ce qu’il faut enregistrer</h2>
+    <div class="files">
+      <div class="file"><span class="big">84</span><h3>Lettres</h3><p>3 fichiers par lettre : le nom, les trois voyelles, le mot exemple. Voix de l’oustaz, en arabe.</p><code>lettres/02-ba-nom.mp3</code><code>lettres/02-ba-voyelles.mp3</code><code>lettres/02-ba-mot.mp3</code></div>
+      <div class="file"><span class="big">36</span><h3>Invocations</h3><p>3 fichiers par invocation : l’arabe récité lentement, l’explication en français, l’explication en wolof.</p><code>invocations/03-dormir-ar.mp3</code><code>invocations/03-dormir-fr.mp3</code><code>invocations/03-dormir-wo.mp3</code></div>
+      <div class="file"><span class="big">1</span><h3>Autorisation</h3><p>Un accord écrit de la personne enregistrée pour l’utilisation gratuite de sa voix dans l’application.</p></div>
+    </div>
+    <ol class="steps">
+      <li>Pièce calme, sans ventilateur ni télévision ; téléphone posé à environ 20 cm de la bouche.</li>
+      <li>Un fichier par élément, nommé comme ci-dessus ; 1 seconde de silence au début et à la fin.</li>
+      <li>Voix posée et lente, comme pour un enfant ; l’arabe d’abord, sans explication dans le même fichier.</li>
+      <li>Format mp3 ou m4a ; l’enregistreur vocal du téléphone suffit.</li>
+    </ol>
+  </section>
+
+  <footer>Fiche préparée pour l’application Bayân. Les références de hadiths sont données selon la numérotation courante (Bukhârî, Muslim, Abû Dâwud, Tirmidhî) et sont à confirmer lors de la relecture.</footer>
+</div>
+
+<script>
+const letters = [
+  ['ا','ألف','Alif','a','أَسَد','asad · le lion'],
+  ['ب','باء','Bâ','b','بَيْت','bayt · la maison'],
+  ['ت','تاء','Tâ','t','تُفَّاح','tuffâḥ · la pomme'],
+  ['ث','ثاء','Thâ','th anglais de « think »','ثَعْلَب','thaʿlab · le renard'],
+  ['ج','جيم','Jîm','dj','جَمَل','jamal · le chameau'],
+  ['ح','حاء','Ḥâ','h soufflé du fond de la gorge','حَلِيب','ḥalîb · le lait'],
+  ['خ','خاء','Khâ','j espagnol, comme un r raclé','خُبْز','khubz · le pain'],
+  ['د','دال','Dâl','d','دَجَاجَة','dajâja · la poule'],
+  ['ذ','ذال','Dhâl','th anglais de « this »','ذَهَب','dhahab · l’or'],
+  ['ر','راء','Râ','r roulé','رُمَّان','rummân · la grenade'],
+  ['ز','زاي','Zây','z','زَيْتُون','zaytûn · l’olive'],
+  ['س','سين','Sîn','s','سَمَك','samak · le poisson'],
+  ['ش','شين','Shîn','ch','شَمْس','shams · le soleil'],
+  ['ص','صاد','Ṣâd','s appuyé (emphatique)','صَقْر','ṣaqr · le faucon'],
+  ['ض','ضاد','Ḍâd','d appuyé (emphatique)','ضِفْدَع','ḍifdaʿ · la grenouille'],
+  ['ط','طاء','Ṭâ','t appuyé (emphatique)','طَائِرَة','ṭâʾira · l’avion'],
+  ['ظ','ظاء','Ẓâ','th de « this », appuyé','ظَرْف','ẓarf · l’enveloppe'],
+  ['ع','عين','ʿAyn','son de gorge, sans équivalent en français','عِنَب','ʿinab · le raisin'],
+  ['غ','غين','Ghayn','r grasseyé','غَيْمَة','ghayma · le nuage'],
+  ['ف','فاء','Fâ','f','فِيل','fîl · l’éléphant'],
+  ['ق','قاف','Qâf','k du fond de la gorge','قَمَر','qamar · la lune'],
+  ['ك','كاف','Kâf','k','كِتَاب','kitâb · le livre'],
+  ['ل','لام','Lâm','l','لَيْمُون','laymûn · le citron'],
+  ['م','ميم','Mîm','m','مَاء','mâʾ · l’eau'],
+  ['ن','نون','Nûn','n','نَجْمَة','najma · l’étoile'],
+  ['ه','هاء','Hâ','h léger, expiré','هِلَال','hilâl · le croissant de lune'],
+  ['و','واو','Wâw','w (ou)','وَرْدَة','warda · la rose'],
+  ['ي','ياء','Yâ','y','يَد','yad · la main'],
+];
+const tbody = document.getElementById('letters');
+letters.forEach(([l, arName, name, sound, word, meaning], i) => {
+  const tr = document.createElement('tr');
+  tr.innerHTML = `<td class="num">${i + 1}</td><td><span class="letter" lang="ar">${l}</span></td>` +
+    `<td><strong>${name}</strong> <span class="ar" lang="ar">${arName}</span></td><td>${sound}</td>` +
+    `<td><span class="word" lang="ar" dir="rtl">${word}</span><br><span style="color:var(--muted)">${meaning}</span></td>` +
+    `<td><span class="check"><span>Validé</span><span>À corriger</span></span></td>`;
+  tbody.appendChild(tr);
+});
+
+const duas = [
+  { m: 'Avant de manger', ar: 'بِسْمِ اللَّهِ', tr: 'Bismillâh', fr: 'Au nom d’Allah.', src: 'Bukhârî 5376 · Muslim 2022',
+    alt: { label: 'Si on a oublié au début', ar: 'بِسْمِ اللَّهِ أَوَّلَهُ وَآخِرَهُ', tr: 'Bismillâhi awwalahû wa âkhirah', fr: 'Au nom d’Allah, au début et à la fin.', src: 'Abû Dâwud 3767 · Tirmidhî 1858' } },
+  { m: 'Après avoir mangé', ar: 'الْحَمْدُ لِلَّهِ', tr: 'Al-ḥamdu lillâh', fr: 'Louange à Allah.', src: 'Muslim 2734',
+    alt: { label: 'Forme longue', ar: 'الْحَمْدُ لِلَّهِ الَّذِي أَطْعَمَنِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ', tr: 'Al-ḥamdu lillâhi lladhî aṭʿamanî hâdhâ wa razaqanîhi min ghayri ḥawlin minnî wa lâ quwwa', fr: 'Louange à Allah qui m’a nourri de ceci et me l’a accordé sans force ni puissance de ma part.', src: 'Abû Dâwud 4023 · Tirmidhî 3458' } },
+  { m: 'Avant de dormir', ar: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا', tr: 'Bismika Allâhumma amûtu wa aḥyâ', fr: 'En Ton nom, ô Allah, je meurs et je vis.', src: 'Bukhârî 6324' },
+  { m: 'Au réveil', ar: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ', tr: 'Al-ḥamdu lillâhi lladhî aḥyânâ baʿda mâ amâtanâ wa ilayhi n-nushûr', fr: 'Louange à Allah qui nous a rendu la vie après nous avoir fait mourir, et c’est vers Lui la résurrection.', src: 'Bukhârî 6324' },
+  { m: 'En sortant de la maison', ar: 'بِسْمِ اللَّهِ، تَوَكَّلْتُ عَلَى اللَّهِ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ', tr: 'Bismillâh, tawakkaltu ʿala-llâh, wa lâ ḥawla wa lâ quwwata illâ billâh', fr: 'Au nom d’Allah, je place ma confiance en Allah ; il n’y a de force ni de puissance qu’en Allah.', src: 'Abû Dâwud 5095 · Tirmidhî 3426' },
+  { m: 'En entrant à la maison', ar: 'بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى رَبِّنَا تَوَكَّلْنَا', tr: 'Bismillâhi walajnâ, wa bismillâhi kharajnâ, wa ʿalâ rabbinâ tawakkalnâ', fr: 'Au nom d’Allah nous entrons, au nom d’Allah nous sortons, et en notre Seigneur nous plaçons notre confiance.', src: 'Abû Dâwud 5096',
+    warn: 'Chaîne de transmission discutée par certains savants : à confirmer. Alternative simple : dire « Bismillâh » et saluer « As-salâmu ʿalaykum ».' },
+  { m: 'En entrant aux toilettes', ar: 'بِسْمِ اللَّهِ، اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْخُبُثِ وَالْخَبَائِثِ', tr: 'Bismillâh, Allâhumma innî aʿûdhu bika mina l-khubuthi wa l-khabâʾith', fr: 'Au nom d’Allah. Ô Allah, je cherche refuge auprès de Toi contre les démons, mâles et femelles.', src: 'Bukhârî 142 · Muslim 375 (Bismillâh : Tirmidhî 606)' },
+  { m: 'En sortant des toilettes', ar: 'غُفْرَانَكَ', tr: 'Ghufrânak', fr: '(Je demande) Ton pardon.', src: 'Abû Dâwud 30 · Tirmidhî 7' },
+  { m: 'Quand on éternue', ar: 'الْحَمْدُ لِلَّهِ', tr: 'Al-ḥamdu lillâh', fr: 'Louange à Allah.', src: 'Bukhârî 6224',
+    alt: { label: 'Réponse de celui qui entend, puis de celui qui a éternué', ar: 'يَرْحَمُكَ اللَّهُ · يَهْدِيكُمُ اللَّهُ وَيُصْلِحُ بَالَكُمْ', tr: 'Yarḥamuka-llâh · Yahdîkumu-llâhu wa yuṣliḥu bâlakum', fr: 'Qu’Allah te fasse miséricorde. · Qu’Allah vous guide et améliore votre état.', src: 'Bukhârî 6224' } },
+  { m: 'Pour saluer', ar: 'السَّلَامُ عَلَيْكُمْ', tr: 'As-salâmu ʿalaykum', fr: 'Que la paix soit sur vous.', src: 'Muslim 54 · Coran 4:86',
+    alt: { label: 'Réponse', ar: 'وَعَلَيْكُمُ السَّلَامُ', tr: 'Wa ʿalaykumu s-salâm', fr: 'Et sur vous la paix.', src: '' } },
+  { m: 'Pour remercier', ar: 'جَزَاكَ اللَّهُ خَيْرًا', tr: 'Jazâka-llâhu khayran', fr: 'Qu’Allah te récompense par le bien.', src: 'Tirmidhî 2035' },
+  { m: 'En voiture ou en voyage', ar: 'سُبْحَانَ الَّذِي سَخَّرَ لَنَا هَذَا وَمَا كُنَّا لَهُ مُقْرِنِينَ، وَإِنَّا إِلَى رَبِّنَا لَمُنْقَلِبُونَ', tr: 'Subḥâna lladhî sakhkhara lanâ hâdhâ wa mâ kunnâ lahû muqrinîn, wa innâ ilâ rabbinâ la-munqalibûn', fr: 'Gloire à Celui qui a mis ceci à notre service alors que nous n’étions pas capables de le dominer ; et c’est vers notre Seigneur que nous retournerons.', src: 'Coran 43:13-14 · Muslim 1342' },
+];
+const box = document.getElementById('duas');
+duas.forEach((d, i) => {
+  const el = document.createElement('article');
+  el.className = 'dua';
+  el.innerHTML =
+    `<header><h3>${i + 1}. ${d.m}</h3><span class="check"><span>Validé</span><span>À corriger</span></span></header>` +
+    `<p class="ar" lang="ar">${d.ar}</p><p class="tr">${d.tr}</p><p>« ${d.fr} »</p><p class="src">${d.src}</p>` +
+    (d.alt ? `<div class="alt"><span class="pill" style="align-self:flex-start">${d.alt.label}</span><p class="ar" lang="ar">${d.alt.ar}</p><p class="tr">${d.alt.tr}</p><p>« ${d.alt.fr} »</p>${d.alt.src ? `<p class="src">${d.alt.src}</p>` : ''}</div>` : '') +
+    (d.warn ? `<p class="note">${d.warn}</p>` : '');
+  box.appendChild(el);
+});
+</script>
+
+</body></html>
